@@ -1,0 +1,35 @@
+@import '../style/veriable';
+
+
+section.gradient {
+	padding: .06rem .09rem;
+	background: linear-gradient($white, $grayGradient);
+	font-size: .1rem;
+	a span {
+		color: $lightBlue;
+	}
+	> span {
+		float: right;
+	}
+}
+footer {
+	padding-bottom: .11rem;
+	font-size: .1rem;
+	text-align: center;
+	ul {
+		display: inline-block;
+		margin-left: -.02rem;
+		padding: .2rem 0;
+		li {
+			float: left;
+			padding: 0 .15rem;
+			border-right: 1px solid $black;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+	#copyRight {
+		color: $moreGray;
+	}
+}

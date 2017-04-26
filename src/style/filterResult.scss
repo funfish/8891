@@ -1,0 +1,31 @@
+@import '../../style/veriable';
+@import '../../style/mixins';
+@import '../../style/common';
+
+header.car-select-title {
+	padding: .13rem .11rem .1rem;
+	font-size: .12rem;
+	font-weight: 700;
+}
+ul.car-list {
+	li {
+		padding: .11rem;
+		border-top: 1px solid $gray3;
+		div{
+			float: left;
+			font-size: .14rem;
+			font-weight: 700;
+			span:last-child {
+				line-height: .15rem;
+				color: $red;
+				font-weight: 400;
+			}
+		}
+		div:first-child {
+			@include size(.89rem, .63rem);
+		}
+		.car-description {
+			padding: .13rem 0 .13rem .17rem;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+@import '../../style/veriable';
+@import '../../style/mixins';
+@import '../../style/common';
+
+header.nav-filter {
+	@extend .flexbox;
+	@include size(100%, .24rem);
+	background-color: $orange;
+	padding: .1rem 0;
+	font-size: .18rem;
+	color: $white;
+	button {
+		margin-right: .09rem;
+		border: 1px solid $white;
+		height: .2rem;
+		line-height: .2rem;
+		font-size: .16rem;
+		color: inherit;
+	}
+	a {
+		margin-left: .09rem;
+	}
+	div {
+		@include flex();
+		text-align: center;
+	}
+}
+.filter {
+	> ul > li {
+		header{
+			border-bottom: 1px solid $gray3;
+			padding: 0 .13rem;
+			@include box-sizing(border-box);
+			@include size(100%, .3rem);
+			line-height: .3rem;
+			background-color: $gray2;
+			color: $textGray;
+			font-size: .16rem;
+			button {
+				float: right;
+				margin-top: .04rem;
+				@include size(.54rem, .22rem);
+				border: 1px solid $textGray;
+				line-height: .22rem;
+				color: inherit;
+				font-size: .1rem;
+			}
+		}
+		.price {
+			float: right;
+			font-size: .1rem;
+		}
+		#column {
+			@include size(100%, 1.22rem);
+		}
+		.choose {
+			border-bottom: 1px solid $gray3;
+			padding: .16rem .13rem .03rem;
+		}
+		.choose-button {
+			float: left;
+			margin: 0 2.5% .12rem 0;
+			@include size(18%, .3rem);
+			line-height: .3rem;
+			background-color: $bestGray;	
+			color: $black;	
+			font-size: .1rem;
+			text-align: center;
+			&:nth-child(5n) {
+				margin-right: 0;
+			}
+		}
+		.chooseactive {
+			background-color: $orange;
+			color: $white;
+		}
+		&:last-child .choose{
+			border: none;
+		}
+	}
+	#filterResult {
+		@include box-sizing(border-box);
+		padding: .02rem 0 .02rem .51rem;
+		@include size(100%, .49rem);
+		div {
+			display: inline-block;
+			border: 1px solid $gray;
+			padding: 0 .03rem;
+			height: .43rem;
+			line-height: .43rem;
+			font-size: .18rem;
+			&:first-child {
+				color: $orange;
+			}
+			&:last-child {
+				margin-left: .05rem; 
+				color: $white;
+				background-color: $orange;
+			}
+		}
+	}
+}
